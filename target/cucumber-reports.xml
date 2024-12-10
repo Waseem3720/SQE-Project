@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="0.533" tests="6" skipped="0" failures="0" errors="0">
+<testcase classname="Facebook Login" name="User logs in" time="0.05">
+<system-out><![CDATA[
+Given I open the Chrome browser and navigate to "https://www.facebook.com/".passed
+When I enter "03042021926" into the "email" field...........................passed
+When I enter "samar2487" into the "pass" field..............................passed
+When I click the "login" button.............................................passed
+Then I should be logged in successfully.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Facebook Login" name="User posts a status" time="0.009">
+<system-out><![CDATA[
+Given I am logged into Facebook.............................................passed
+When I click on "What's on your mind?"......................................passed
+And I type "Hello, world!" into the post box................................passed
+And I click on "Post".......................................................passed
+Then my status should be posted successfully................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Facebook Login" name="User registers" time="0.016">
+<system-out><![CDATA[
+Given I am on the Facebook login page.......................................passed
+When I fill in "John" as my first name......................................passed
+And I fill in "Doe" as my last name.........................................passed
+And I enter "john.doe@example.com" as my email..............................passed
+And I enter "password123" as my password....................................passed
+And I select "10" from the day dropdown.....................................passed
+And I select "April" from the month dropdown................................passed
+And I select "1990" from the year dropdown..................................passed
+And I select "Male".........................................................passed
+Then I should be registered successfully....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Facebook Login" name="User recovers password" time="0.012">
+<system-out><![CDATA[
+Given I am on the Facebook login page.......................................passed
+When I enter "john.doe@example.com" into the email field....................passed
+And I click the submit button...............................................passed
+Then I should see a confirmation message for password recovery..............passed
+]]></system-out>
+</testcase>
+<testcase classname="Facebook Login" name="User logs out" time="0.005">
+<system-out><![CDATA[
+Given I am logged into Facebook.............................................passed
+When I click the "Logout" button............................................passed
+Then I should be logged out successfully....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Facebook Login" name="User dismisses notification popup" time="0.005">
+<system-out><![CDATA[
+Given I am logged into Facebook.............................................passed
+When a notification popup appears...........................................passed
+Then I click anywhere on the body to dismiss the popup......................passed
+]]></system-out>
+</testcase>
+</testsuite>
