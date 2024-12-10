@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="MainSuite" parallel="tests" thread-count="5">
+
+  <!-- Suite 1: Book Test Excel -->
+  <test name="BookTestExcel" parallel="classes" thread-count="1">
+    <groups>
+      <run>
+        <!-- Assign group "BookTestExcel" to this suite -->
+        <include name="BookTestExcel"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="test.BookTestExcel">
+        <parameter name="bookId" value="B001"/>
+        <parameter name="bookTitle" value="The Great Gatsby"/>
+      </class>
+    </classes>
+  </test>
+
+
+  <!-- Suite 2: Library Test Excel -->
+  <test name="LibraryTestExcel" parallel="classes" thread-count="1">
+    <groups>
+      <run>
+        <!-- Assign group "LibraryTestExcel" to this suite -->
+        <include name="libraryTestExcel"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="test.LibraryTestExcel">
+        <parameter name="libraryName" value="Central Library"/>
+        <parameter name="location" value="Downtown"/>
+      </class>
+    </classes>
+  </test>
+
+  <!-- Suite 3: Library Tests -->
+  <test name="LibraryTests" parallel="classes" thread-count="2">
+    <groups>
+      <run>
+        <!-- Library tests group -->
+        <include name="bookTests"/>
+        <include name="memberTests"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="test.LibraryTest"/>
+    </classes>
+  </test>
+
+  <!-- Suite 4: Member Tests -->
+  <test name="MemberTests" parallel="classes" thread-count="1">
+    <groups>
+      <run>
+        <!-- Member tests group -->
+        <include name="borrow_return"/>
+        <include name="member_info"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="test.MemberTest"/>
+    </classes>
+  </test>
+
+  <!-- Suite 5: Library Management System Tests -->
+  <test name="LibraryManagementSystemTests" parallel="classes" thread-count="1">
+    <groups>
+      <run>
+        <!-- Library Management tests group -->
+        <include name="Book"/>
+        <include name="Member"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="test.LibraryManagementSystemTest"/>
+    </classes>
+  </test>
+
+  <!-- Suite 6: Book Getters and Setters Tests -->
+  <test name="BookGettersSettersTests" parallel="classes" thread-count="2">
+    <groups>
+      <run>
+        <!-- Include "getters" and "setters" groups -->
+        <include name="getters"/>
+        <include name="setters"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="test.BookTest">
+        <parameter name="expectedBookId" value="B001"/>
+        <parameter name="expectedTitle" value="The Great Gatsby"/>
+      </class>
+    </classes>
+  </test>
+
+</suite>

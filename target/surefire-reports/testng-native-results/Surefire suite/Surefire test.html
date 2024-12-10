@@ -1,0 +1,345 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>53/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Dec 11 00:33:49 PKT 2024</td>
+</tr>
+<tr><td>Total time:</td><td>0 seconds (273 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='test.LibraryTest.testListMembers()'><b>testListMembers</b><br>Test class: test.LibraryTest<br>Parameters: library.Member@660acfb, library.Member@5d908d47</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryTest@23c30a20</td></tr>
+<tr>
+<td title='test.LibraryTest.testIsBookAvailable()'><b>testIsBookAvailable</b><br>Test class: test.LibraryTest<br>Parameters: B004, true</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryTest@23c30a20</td></tr>
+<tr>
+<td title='test.MemberTest.testGetDetails()'><b>testGetDetails</b><br>Test class: test.MemberTest<br>Parameters: Member ID: M001, Name: Ali Ahmed, M001, Ali Ahmed</td>
+<td></td>
+<td>0</td>
+<td>test.MemberTest@1e1a0406</td></tr>
+<tr>
+<td title='test.MemberTest.testBorrowBook()'><b>testBorrowBook</b><br>Test class: test.MemberTest<br>Parameters: Book borrowed: City of Hearts, true, B001, City of Hearts, Ahmed Faraz, M001, Ali Ahmed</td>
+<td></td>
+<td>0</td>
+<td>test.MemberTest@1e1a0406</td></tr>
+<tr>
+<td title='test.BookTest.testGetTitle()'><b>testGetTitle</b><br>Test class: test.BookTest<br>Parameters: Dreams of the World, B002, Dreams of the World, Mahmood Khan, false</td>
+<td></td>
+<td>0</td>
+<td>test.BookTest@4803b726</td></tr>
+<tr>
+<td title='test.BookTest.testGetTitle()'><b>testGetTitle</b><br>Test class: test.BookTest<br>Parameters: World of Sufism, B003, World of Sufism, Abdullah Khan, true</td>
+<td></td>
+<td>0</td>
+<td>test.BookTest@4803b726</td></tr>
+<tr>
+<td title='test.LibraryManagementSystemTest.testAddNewBook()'><b>testAddNewBook</b><br>Test class: test.LibraryManagementSystemTest<br>Parameters: B001, City of Hearts, Ahmed Faraz, true</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryManagementSystemTest@437da279</td></tr>
+<tr>
+<td title='test.LibraryTest.testAddBook()'><b>testAddBook</b><br>Test class: test.LibraryTest<br>Parameters: library.Book@14bdbc74</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryTest@23c30a20</td></tr>
+<tr>
+<td title='test.BookTest.testGetBookId()'><b>testGetBookId</b><br>Test class: test.BookTest<br>Parameters: B002, B002, Dreams of the World, Mahmood Khan, false</td>
+<td></td>
+<td>0</td>
+<td>test.BookTest@4803b726</td></tr>
+<tr>
+<td title='test.MemberTest.testReturnBook()'><b>testReturnBook</b><br>Test class: test.MemberTest<br>Parameters: Book returned: City of Hearts, false, B001, City of Hearts, Ahmed Faraz, M001, Ali Ahmed</td>
+<td></td>
+<td>0</td>
+<td>test.MemberTest@1e1a0406</td></tr>
+<tr>
+<td title='test.LibraryTest.testAddMember()'><b>testAddMember</b><br>Test class: test.LibraryTest<br>Parameters: library.Member@3e0e1046</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryTest@23c30a20</td></tr>
+<tr>
+<td title='test.LibraryManagementSystemTest.testAddNewBook()'><b>testAddNewBook</b><br>Test class: test.LibraryManagementSystemTest<br>Parameters: B003, The World Beyond, Ayesha Ali, true</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryManagementSystemTest@437da279</td></tr>
+<tr>
+<td title='test.MemberTest.testReturnBook()'><b>testReturnBook</b><br>Test class: test.MemberTest<br>Parameters: Book returned: Dreams of the World, true, B002, Dreams of the World, Mahmood Khan, M002, Sara Ali</td>
+<td></td>
+<td>0</td>
+<td>test.MemberTest@1e1a0406</td></tr>
+<tr>
+<td title='test.MemberTest.testGetMemberId()'><b>testGetMemberId</b><br>Test class: test.MemberTest<br>Parameters: M001, M001, Ali Ahmed</td>
+<td></td>
+<td>0</td>
+<td>test.MemberTest@1e1a0406</td></tr>
+<tr>
+<td title='test.BookTest.testSetAvailable()'><b>testSetAvailable</b><br>Test class: test.BookTest<br>Parameters: false, B003, World of Sufism, Abdullah Khan, true</td>
+<td></td>
+<td>0</td>
+<td>test.BookTest@4803b726</td></tr>
+<tr>
+<td title='test.MemberTest.testGetName()'><b>testGetName</b><br>Test class: test.MemberTest<br>Parameters: Ali Ahmed, M001, Ali Ahmed</td>
+<td></td>
+<td>0</td>
+<td>test.MemberTest@1e1a0406</td></tr>
+<tr>
+<td title='test.LibraryTest.testAddMember()'><b>testAddMember</b><br>Test class: test.LibraryTest<br>Parameters: library.Member@41330d4f</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryTest@23c30a20</td></tr>
+<tr>
+<td title='test.MemberTest.testGetDetails()'><b>testGetDetails</b><br>Test class: test.MemberTest<br>Parameters: Member ID: M002, Name: Sara Ali, M002, Sara Ali</td>
+<td></td>
+<td>0</td>
+<td>test.MemberTest@1e1a0406</td></tr>
+<tr>
+<td title='test.MemberTest.testGetName()'><b>testGetName</b><br>Test class: test.MemberTest<br>Parameters: Sara Ali, M002, Sara Ali</td>
+<td></td>
+<td>0</td>
+<td>test.MemberTest@1e1a0406</td></tr>
+<tr>
+<td title='test.LibraryTest.testAddBook()'><b>testAddBook</b><br>Test class: test.LibraryTest<br>Parameters: library.Book@f68f0dc</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryTest@23c30a20</td></tr>
+<tr>
+<td title='test.MemberTest.testGetMemberId()'><b>testGetMemberId</b><br>Test class: test.MemberTest<br>Parameters: M003, M003, Aslam Raza</td>
+<td></td>
+<td>0</td>
+<td>test.MemberTest@1e1a0406</td></tr>
+<tr>
+<td title='test.LibraryManagementSystemTest.testAddNewMember()'><b>testAddNewMember</b><br>Test class: test.LibraryManagementSystemTest<br>Parameters: M001, Ali Ahmed</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryManagementSystemTest@437da279</td></tr>
+<tr>
+<td title='test.LibraryTest.testAddMember()'><b>testAddMember</b><br>Test class: test.LibraryTest<br>Parameters: library.Member@5a7fe64f</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryTest@23c30a20</td></tr>
+<tr>
+<td title='test.LibraryManagementSystemTest.testCheckBookAvailability()'><b>testCheckBookAvailability</b><br>Test class: test.LibraryManagementSystemTest<br>Parameters: B001, true</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryManagementSystemTest@437da279</td></tr>
+<tr>
+<td title='test.BookTest.testIsAvailable()'><b>testIsAvailable</b><br>Test class: test.BookTest<br>Parameters: true, B003, World of Sufism, Abdullah Khan, true</td>
+<td></td>
+<td>0</td>
+<td>test.BookTest@4803b726</td></tr>
+<tr>
+<td title='test.LibraryManagementSystemTest.testAddNewBook()'><b>testAddNewBook</b><br>Test class: test.LibraryManagementSystemTest<br>Parameters: B002, Dreams of the World, Mahmood Khan, false</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryManagementSystemTest@437da279</td></tr>
+<tr>
+<td title='test.MemberTest.testGetDetails()'><b>testGetDetails</b><br>Test class: test.MemberTest<br>Parameters: Member ID: M003, Name: Aslam Raza, M003, Aslam Raza</td>
+<td></td>
+<td>0</td>
+<td>test.MemberTest@1e1a0406</td></tr>
+<tr>
+<td title='test.LibraryTest.testListBooks()'><b>testListBooks</b><br>Test class: test.LibraryTest<br>Parameters: library.Book@7dc19a70, library.Book@508dec2b</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryTest@23c30a20</td></tr>
+<tr>
+<td title='test.BookTest.testGetAuthor()'><b>testGetAuthor</b><br>Test class: test.BookTest<br>Parameters: Ahmed Faraz, B001, City of Hearts, Ahmed Faraz, true</td>
+<td></td>
+<td>0</td>
+<td>test.BookTest@4803b726</td></tr>
+<tr>
+<td title='test.MemberTest.testBorrowBook()'><b>testBorrowBook</b><br>Test class: test.MemberTest<br>Parameters: Book borrowed: World of Sufism, true, B003, World of Sufism, Abdullah Khan, M003, Aslam Raza</td>
+<td></td>
+<td>0</td>
+<td>test.MemberTest@1e1a0406</td></tr>
+<tr>
+<td title='test.LibraryTest.testIsBookAvailable()'><b>testIsBookAvailable</b><br>Test class: test.LibraryTest<br>Parameters: B001, true</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryTest@23c30a20</td></tr>
+<tr>
+<td title='test.LibraryTest.testListMembers()'><b>testListMembers</b><br>Test class: test.LibraryTest<br>Parameters: library.Member@1f9f6368, library.Member@1c9b0314</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryTest@23c30a20</td></tr>
+<tr>
+<td title='test.MemberTest.testReturnBook()'><b>testReturnBook</b><br>Test class: test.MemberTest<br>Parameters: Book returned: World of Sufism, true, B003, World of Sufism, Abdullah Khan, M003, Aslam Raza</td>
+<td></td>
+<td>0</td>
+<td>test.MemberTest@1e1a0406</td></tr>
+<tr>
+<td title='test.MemberTest.testBorrowBook()'><b>testBorrowBook</b><br>Test class: test.MemberTest<br>Parameters: Book is currently unavailable., false, B002, Dreams of the World, Mahmood Khan, M002, Sara Ali</td>
+<td></td>
+<td>0</td>
+<td>test.MemberTest@1e1a0406</td></tr>
+<tr>
+<td title='test.LibraryTest.testListBooks()'><b>testListBooks</b><br>Test class: test.LibraryTest<br>Parameters: library.Book@1df8da7a, library.Book@23941fb4</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryTest@23c30a20</td></tr>
+<tr>
+<td title='test.LibraryManagementSystemTest.testCheckBookAvailability()'><b>testCheckBookAvailability</b><br>Test class: test.LibraryManagementSystemTest<br>Parameters: B003, true</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryManagementSystemTest@437da279</td></tr>
+<tr>
+<td title='test.LibraryTest.testIsBookAvailable()'><b>testIsBookAvailable</b><br>Test class: test.LibraryTest<br>Parameters: B002, false</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryTest@23c30a20</td></tr>
+<tr>
+<td title='test.BookTest.testSetAvailable()'><b>testSetAvailable</b><br>Test class: test.BookTest<br>Parameters: true, B002, Dreams of the World, Mahmood Khan, false</td>
+<td></td>
+<td>0</td>
+<td>test.BookTest@4803b726</td></tr>
+<tr>
+<td title='test.BookTest.testSetAvailable()'><b>testSetAvailable</b><br>Test class: test.BookTest<br>Parameters: false, B001, City of Hearts, Ahmed Faraz, true</td>
+<td></td>
+<td>0</td>
+<td>test.BookTest@4803b726</td></tr>
+<tr>
+<td title='test.LibraryTest.testAddBook()'><b>testAddBook</b><br>Test class: test.LibraryTest<br>Parameters: library.Book@6cd24612</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryTest@23c30a20</td></tr>
+<tr>
+<td title='test.LibraryManagementSystemTest.testAddNewMember()'><b>testAddNewMember</b><br>Test class: test.LibraryManagementSystemTest<br>Parameters: M002, Sara Ali</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryManagementSystemTest@437da279</td></tr>
+<tr>
+<td title='test.MemberTest.testGetMemberId()'><b>testGetMemberId</b><br>Test class: test.MemberTest<br>Parameters: M002, M002, Sara Ali</td>
+<td></td>
+<td>0</td>
+<td>test.MemberTest@1e1a0406</td></tr>
+<tr>
+<td title='test.LibraryTest.testIsBookAvailable()'><b>testIsBookAvailable</b><br>Test class: test.LibraryTest<br>Parameters: B003, false</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryTest@23c30a20</td></tr>
+<tr>
+<td title='test.BookTest.testGetBookId()'><b>testGetBookId</b><br>Test class: test.BookTest<br>Parameters: B003, B003, World of Sufism, Abdullah Khan, true</td>
+<td></td>
+<td>0</td>
+<td>test.BookTest@4803b726</td></tr>
+<tr>
+<td title='test.LibraryManagementSystemTest.testAddNewMember()'><b>testAddNewMember</b><br>Test class: test.LibraryManagementSystemTest<br>Parameters: M003, Aslam Raza</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryManagementSystemTest@437da279</td></tr>
+<tr>
+<td title='test.BookTest.testIsAvailable()'><b>testIsAvailable</b><br>Test class: test.BookTest<br>Parameters: true, B001, City of Hearts, Ahmed Faraz, true</td>
+<td></td>
+<td>0</td>
+<td>test.BookTest@4803b726</td></tr>
+<tr>
+<td title='test.LibraryManagementSystemTest.testCheckBookAvailability()'><b>testCheckBookAvailability</b><br>Test class: test.LibraryManagementSystemTest<br>Parameters: B002, false</td>
+<td></td>
+<td>0</td>
+<td>test.LibraryManagementSystemTest@437da279</td></tr>
+<tr>
+<td title='test.BookTest.testGetBookId()'><b>testGetBookId</b><br>Test class: test.BookTest<br>Parameters: B001, B001, City of Hearts, Ahmed Faraz, true</td>
+<td></td>
+<td>0</td>
+<td>test.BookTest@4803b726</td></tr>
+<tr>
+<td title='test.BookTest.testGetAuthor()'><b>testGetAuthor</b><br>Test class: test.BookTest<br>Parameters: Mahmood Khan, B002, Dreams of the World, Mahmood Khan, false</td>
+<td></td>
+<td>0</td>
+<td>test.BookTest@4803b726</td></tr>
+<tr>
+<td title='test.BookTest.testIsAvailable()'><b>testIsAvailable</b><br>Test class: test.BookTest<br>Parameters: false, B002, Dreams of the World, Mahmood Khan, false</td>
+<td></td>
+<td>0</td>
+<td>test.BookTest@4803b726</td></tr>
+<tr>
+<td title='test.BookTest.testGetAuthor()'><b>testGetAuthor</b><br>Test class: test.BookTest<br>Parameters: Abdullah Khan, B003, World of Sufism, Abdullah Khan, true</td>
+<td></td>
+<td>0</td>
+<td>test.BookTest@4803b726</td></tr>
+<tr>
+<td title='test.MemberTest.testGetName()'><b>testGetName</b><br>Test class: test.MemberTest<br>Parameters: Aslam Raza, M003, Aslam Raza</td>
+<td></td>
+<td>0</td>
+<td>test.MemberTest@1e1a0406</td></tr>
+<tr>
+<td title='test.BookTest.testGetTitle()'><b>testGetTitle</b><br>Test class: test.BookTest<br>Parameters: City of Hearts, B001, City of Hearts, Ahmed Faraz, true</td>
+<td></td>
+<td>0</td>
+<td>test.BookTest@4803b726</td></tr>
+</table><p>
+</body>
+</html>

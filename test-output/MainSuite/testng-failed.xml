@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [MainSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="classes" name="BookTestExcel(failed)">
+    <groups>
+      <run>
+        <include name="BookTestExcel"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="test.BookTestExcel">
+        <parameter name="bookId" value="B001"/>
+        <parameter name="bookTitle" value="The Great Gatsby"/>
+        <methods>
+          <include name="testAddNewBook"/>
+        </methods>
+      </class> <!-- test.BookTestExcel -->
+    </classes>
+  </test> <!-- BookTestExcel(failed) -->
+  <test thread-count="5" parallel="classes" name="LibraryTestExcel(failed)">
+    <groups>
+      <run>
+        <include name="libraryTestExcel"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="test.LibraryTestExcel">
+        <parameter name="libraryName" value="Central Library"/>
+        <parameter name="location" value="Downtown"/>
+        <methods>
+          <include name="testAddBookAndMember"/>
+        </methods>
+      </class> <!-- test.LibraryTestExcel -->
+    </classes>
+  </test> <!-- LibraryTestExcel(failed) -->
+</suite> <!-- Failed suite [MainSuite] -->

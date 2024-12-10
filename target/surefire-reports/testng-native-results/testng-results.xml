@@ -1,0 +1,1332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="53" passed="53" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-12-11T00:33:49 PKT" name="Surefire suite" finished-at="2024-12-11T00:33:50 PKT" duration-ms="273">
+    <groups>
+      <group name="addTests">
+        <method signature="LibraryTest.testAddBook(library.Book)[pri:1, instance:test.LibraryTest@23c30a20]" name="testAddBook" class="test.LibraryTest"/>
+        <method signature="LibraryTest.testAddMember(library.Member)[pri:2, instance:test.LibraryTest@23c30a20]" name="testAddMember" class="test.LibraryTest"/>
+      </group> <!-- addTests -->
+      <group name="bookTests">
+        <method signature="LibraryTest.testAddBook(library.Book)[pri:1, instance:test.LibraryTest@23c30a20]" name="testAddBook" class="test.LibraryTest"/>
+        <method signature="LibraryTest.testListBooks(library.Book,library.Book)[pri:3, instance:test.LibraryTest@23c30a20]" name="testListBooks" class="test.LibraryTest"/>
+        <method signature="LibraryTest.testIsBookAvailable(java.lang.String,boolean)[pri:5, instance:test.LibraryTest@23c30a20]" name="testIsBookAvailable" class="test.LibraryTest"/>
+      </group> <!-- bookTests -->
+      <group name="Book">
+        <method signature="LibraryManagementSystemTest.testAddNewBook(java.lang.String,java.lang.String,java.lang.String,boolean)[pri:1, instance:test.LibraryManagementSystemTest@437da279]" name="testAddNewBook" class="test.LibraryManagementSystemTest"/>
+        <method signature="LibraryManagementSystemTest.testCheckBookAvailability(java.lang.String,boolean)[pri:3, instance:test.LibraryManagementSystemTest@437da279]" name="testCheckBookAvailability" class="test.LibraryManagementSystemTest"/>
+      </group> <!-- Book -->
+      <group name="member_info">
+        <method signature="MemberTest.testGetMemberId(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:test.MemberTest@1e1a0406]" name="testGetMemberId" class="test.MemberTest"/>
+        <method signature="MemberTest.testGetName(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:test.MemberTest@1e1a0406]" name="testGetName" class="test.MemberTest"/>
+        <method signature="MemberTest.testGetDetails(java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:test.MemberTest@1e1a0406]" name="testGetDetails" class="test.MemberTest"/>
+      </group> <!-- member_info -->
+      <group name="setters">
+        <method signature="BookTest.testSetAvailable(boolean,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:5, instance:test.BookTest@4803b726]" name="testSetAvailable" class="test.BookTest"/>
+      </group> <!-- setters -->
+      <group name="memberTests">
+        <method signature="LibraryTest.testAddMember(library.Member)[pri:2, instance:test.LibraryTest@23c30a20]" name="testAddMember" class="test.LibraryTest"/>
+        <method signature="LibraryTest.testListMembers(library.Member,library.Member)[pri:4, instance:test.LibraryTest@23c30a20]" name="testListMembers" class="test.LibraryTest"/>
+      </group> <!-- memberTests -->
+      <group name="availabilityTests">
+        <method signature="LibraryTest.testIsBookAvailable(java.lang.String,boolean)[pri:5, instance:test.LibraryTest@23c30a20]" name="testIsBookAvailable" class="test.LibraryTest"/>
+      </group> <!-- availabilityTests -->
+      <group name="listTests">
+        <method signature="LibraryTest.testListBooks(library.Book,library.Book)[pri:3, instance:test.LibraryTest@23c30a20]" name="testListBooks" class="test.LibraryTest"/>
+        <method signature="LibraryTest.testListMembers(library.Member,library.Member)[pri:4, instance:test.LibraryTest@23c30a20]" name="testListMembers" class="test.LibraryTest"/>
+      </group> <!-- listTests -->
+      <group name="borrow_return">
+        <method signature="MemberTest.testBorrowBook(java.lang.String,boolean,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:test.MemberTest@1e1a0406]" name="testBorrowBook" class="test.MemberTest"/>
+        <method signature="MemberTest.testReturnBook(java.lang.String,boolean,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.MemberTest@1e1a0406]" name="testReturnBook" class="test.MemberTest"/>
+      </group> <!-- borrow_return -->
+      <group name="getters">
+        <method signature="BookTest.testGetBookId(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:1, instance:test.BookTest@4803b726]" name="testGetBookId" class="test.BookTest"/>
+        <method signature="BookTest.testGetTitle(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:2, instance:test.BookTest@4803b726]" name="testGetTitle" class="test.BookTest"/>
+        <method signature="BookTest.testGetAuthor(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:3, instance:test.BookTest@4803b726]" name="testGetAuthor" class="test.BookTest"/>
+        <method signature="BookTest.testIsAvailable(boolean,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:4, instance:test.BookTest@4803b726]" name="testIsAvailable" class="test.BookTest"/>
+      </group> <!-- getters -->
+      <group name="Member">
+        <method signature="LibraryManagementSystemTest.testAddNewMember(java.lang.String,java.lang.String)[pri:2, instance:test.LibraryManagementSystemTest@437da279]" name="testAddNewMember" class="test.LibraryManagementSystemTest"/>
+      </group> <!-- Member -->
+    </groups>
+    <test started-at="2024-12-11T00:33:49 PKT" name="Surefire test" finished-at="2024-12-11T00:33:50 PKT" duration-ms="273">
+      <class name="test.LibraryManagementSystemTest">
+        <test-method signature="testAddNewBook(java.lang.String,java.lang.String,java.lang.String,boolean)[pri:1, instance:test.LibraryManagementSystemTest@437da279]" started-at="2024-12-11T00:33:49 PKT" name="testAddNewBook" data-provider="newBookData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[B001]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[City of Hearts]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ahmed Faraz]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddNewBook -->
+        <test-method signature="testAddNewBook(java.lang.String,java.lang.String,java.lang.String,boolean)[pri:1, instance:test.LibraryManagementSystemTest@437da279]" started-at="2024-12-11T00:33:49 PKT" name="testAddNewBook" data-provider="newBookData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[B002]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Dreams of the World]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Mahmood Khan]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddNewBook -->
+        <test-method signature="testAddNewBook(java.lang.String,java.lang.String,java.lang.String,boolean)[pri:1, instance:test.LibraryManagementSystemTest@437da279]" started-at="2024-12-11T00:33:49 PKT" name="testAddNewBook" data-provider="newBookData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[B003]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[The World Beyond]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ayesha Ali]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddNewBook -->
+        <test-method signature="testAddNewMember(java.lang.String,java.lang.String)[pri:2, instance:test.LibraryManagementSystemTest@437da279]" started-at="2024-12-11T00:33:49 PKT" name="testAddNewMember" data-provider="newMemberData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[M001]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Ali Ahmed]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddNewMember -->
+        <test-method signature="testAddNewMember(java.lang.String,java.lang.String)[pri:2, instance:test.LibraryManagementSystemTest@437da279]" started-at="2024-12-11T00:33:49 PKT" name="testAddNewMember" data-provider="newMemberData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[M002]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Sara Ali]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddNewMember -->
+        <test-method signature="testAddNewMember(java.lang.String,java.lang.String)[pri:2, instance:test.LibraryManagementSystemTest@437da279]" started-at="2024-12-11T00:33:49 PKT" name="testAddNewMember" data-provider="newMemberData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[M003]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Aslam Raza]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddNewMember -->
+        <test-method signature="testCheckBookAvailability(java.lang.String,boolean)[pri:3, instance:test.LibraryManagementSystemTest@437da279]" started-at="2024-12-11T00:33:49 PKT" name="testCheckBookAvailability" data-provider="checkBookAvailabilityData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[B001]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckBookAvailability -->
+        <test-method signature="testCheckBookAvailability(java.lang.String,boolean)[pri:3, instance:test.LibraryManagementSystemTest@437da279]" started-at="2024-12-11T00:33:49 PKT" name="testCheckBookAvailability" data-provider="checkBookAvailabilityData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[B002]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckBookAvailability -->
+        <test-method signature="testCheckBookAvailability(java.lang.String,boolean)[pri:3, instance:test.LibraryManagementSystemTest@437da279]" started-at="2024-12-11T00:33:49 PKT" name="testCheckBookAvailability" data-provider="checkBookAvailabilityData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[B003]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testCheckBookAvailability -->
+      </class> <!-- test.LibraryManagementSystemTest -->
+      <class name="test.MemberTest">
+        <test-method signature="testBorrowBook(java.lang.String,boolean,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:test.MemberTest@1e1a0406]" started-at="2024-12-11T00:33:50 PKT" name="testBorrowBook" data-provider="borrowBookData" finished-at="2024-12-11T00:33:50 PKT" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Book borrowed: City of Hearts]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[B001]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[City of Hearts]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Ahmed Faraz]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[M001]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Ali Ahmed]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBorrowBook -->
+        <test-method signature="testBorrowBook(java.lang.String,boolean,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:test.MemberTest@1e1a0406]" started-at="2024-12-11T00:33:50 PKT" name="testBorrowBook" data-provider="borrowBookData" finished-at="2024-12-11T00:33:50 PKT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Book is currently unavailable.]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[B002]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Dreams of the World]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Mahmood Khan]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[M002]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sara Ali]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBorrowBook -->
+        <test-method signature="testBorrowBook(java.lang.String,boolean,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:test.MemberTest@1e1a0406]" started-at="2024-12-11T00:33:50 PKT" name="testBorrowBook" data-provider="borrowBookData" finished-at="2024-12-11T00:33:50 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Book borrowed: World of Sufism]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[B003]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[World of Sufism]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Abdullah Khan]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[M003]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Aslam Raza]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testBorrowBook -->
+        <test-method signature="testReturnBook(java.lang.String,boolean,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.MemberTest@1e1a0406]" started-at="2024-12-11T00:33:50 PKT" name="testReturnBook" data-provider="returnBookData" finished-at="2024-12-11T00:33:50 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Book returned: City of Hearts]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[B001]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[City of Hearts]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Ahmed Faraz]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[M001]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Ali Ahmed]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReturnBook -->
+        <test-method signature="testReturnBook(java.lang.String,boolean,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.MemberTest@1e1a0406]" started-at="2024-12-11T00:33:50 PKT" name="testReturnBook" data-provider="returnBookData" finished-at="2024-12-11T00:33:50 PKT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Book returned: Dreams of the World]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[B002]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Dreams of the World]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Mahmood Khan]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[M002]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Sara Ali]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReturnBook -->
+        <test-method signature="testReturnBook(java.lang.String,boolean,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:test.MemberTest@1e1a0406]" started-at="2024-12-11T00:33:50 PKT" name="testReturnBook" data-provider="returnBookData" finished-at="2024-12-11T00:33:50 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Book returned: World of Sufism]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[B003]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[World of Sufism]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Abdullah Khan]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[M003]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[Aslam Raza]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testReturnBook -->
+        <test-method signature="testGetMemberId(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:test.MemberTest@1e1a0406]" started-at="2024-12-11T00:33:50 PKT" name="testGetMemberId" data-provider="memberIdData" finished-at="2024-12-11T00:33:50 PKT" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[M001]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[M001]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ali Ahmed]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetMemberId -->
+        <test-method signature="testGetMemberId(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:test.MemberTest@1e1a0406]" started-at="2024-12-11T00:33:50 PKT" name="testGetMemberId" data-provider="memberIdData" finished-at="2024-12-11T00:33:50 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[M002]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[M002]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Sara Ali]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetMemberId -->
+        <test-method signature="testGetMemberId(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:test.MemberTest@1e1a0406]" started-at="2024-12-11T00:33:50 PKT" name="testGetMemberId" data-provider="memberIdData" finished-at="2024-12-11T00:33:50 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[M003]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[M003]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aslam Raza]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetMemberId -->
+        <test-method signature="testGetName(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:test.MemberTest@1e1a0406]" started-at="2024-12-11T00:33:50 PKT" name="testGetName" data-provider="memberNameData" finished-at="2024-12-11T00:33:50 PKT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ali Ahmed]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[M001]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ali Ahmed]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetName -->
+        <test-method signature="testGetName(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:test.MemberTest@1e1a0406]" started-at="2024-12-11T00:33:50 PKT" name="testGetName" data-provider="memberNameData" finished-at="2024-12-11T00:33:50 PKT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Sara Ali]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[M002]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Sara Ali]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetName -->
+        <test-method signature="testGetName(java.lang.String,java.lang.String,java.lang.String)[pri:4, instance:test.MemberTest@1e1a0406]" started-at="2024-12-11T00:33:50 PKT" name="testGetName" data-provider="memberNameData" finished-at="2024-12-11T00:33:50 PKT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Aslam Raza]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[M003]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aslam Raza]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetName -->
+        <test-method signature="testGetDetails(java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:test.MemberTest@1e1a0406]" started-at="2024-12-11T00:33:50 PKT" name="testGetDetails" data-provider="memberDetailsData" finished-at="2024-12-11T00:33:50 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Member ID: M001, Name: Ali Ahmed]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[M001]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ali Ahmed]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetDetails -->
+        <test-method signature="testGetDetails(java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:test.MemberTest@1e1a0406]" started-at="2024-12-11T00:33:50 PKT" name="testGetDetails" data-provider="memberDetailsData" finished-at="2024-12-11T00:33:50 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Member ID: M002, Name: Sara Ali]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[M002]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Sara Ali]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetDetails -->
+        <test-method signature="testGetDetails(java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:test.MemberTest@1e1a0406]" started-at="2024-12-11T00:33:50 PKT" name="testGetDetails" data-provider="memberDetailsData" finished-at="2024-12-11T00:33:50 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Member ID: M003, Name: Aslam Raza]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[M003]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Aslam Raza]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetDetails -->
+      </class> <!-- test.MemberTest -->
+      <class name="test.LibraryTest">
+        <test-method signature="testAddBook(library.Book)[pri:1, instance:test.LibraryTest@23c30a20]" started-at="2024-12-11T00:33:49 PKT" name="testAddBook" data-provider="bookData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[library.Book@6cd24612]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddBook -->
+        <test-method signature="testAddBook(library.Book)[pri:1, instance:test.LibraryTest@23c30a20]" started-at="2024-12-11T00:33:49 PKT" name="testAddBook" data-provider="bookData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[library.Book@f68f0dc]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddBook -->
+        <test-method signature="testAddBook(library.Book)[pri:1, instance:test.LibraryTest@23c30a20]" started-at="2024-12-11T00:33:49 PKT" name="testAddBook" data-provider="bookData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[library.Book@14bdbc74]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddBook -->
+        <test-method signature="testAddMember(library.Member)[pri:2, instance:test.LibraryTest@23c30a20]" started-at="2024-12-11T00:33:49 PKT" name="testAddMember" data-provider="memberData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[library.Member@5a7fe64f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddMember -->
+        <test-method signature="testAddMember(library.Member)[pri:2, instance:test.LibraryTest@23c30a20]" started-at="2024-12-11T00:33:49 PKT" name="testAddMember" data-provider="memberData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[library.Member@41330d4f]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddMember -->
+        <test-method signature="testAddMember(library.Member)[pri:2, instance:test.LibraryTest@23c30a20]" started-at="2024-12-11T00:33:49 PKT" name="testAddMember" data-provider="memberData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[library.Member@3e0e1046]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testAddMember -->
+        <test-method signature="testListBooks(library.Book,library.Book)[pri:3, instance:test.LibraryTest@23c30a20]" started-at="2024-12-11T00:33:49 PKT" name="testListBooks" data-provider="listBooksData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[library.Book@7dc19a70]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[library.Book@508dec2b]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListBooks -->
+        <test-method signature="testListBooks(library.Book,library.Book)[pri:3, instance:test.LibraryTest@23c30a20]" started-at="2024-12-11T00:33:49 PKT" name="testListBooks" data-provider="listBooksData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[library.Book@1df8da7a]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[library.Book@23941fb4]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListBooks -->
+        <test-method signature="testListMembers(library.Member,library.Member)[pri:4, instance:test.LibraryTest@23c30a20]" started-at="2024-12-11T00:33:49 PKT" name="testListMembers" data-provider="listMembersData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[library.Member@660acfb]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[library.Member@5d908d47]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListMembers -->
+        <test-method signature="testListMembers(library.Member,library.Member)[pri:4, instance:test.LibraryTest@23c30a20]" started-at="2024-12-11T00:33:49 PKT" name="testListMembers" data-provider="listMembersData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[library.Member@1f9f6368]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[library.Member@1c9b0314]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testListMembers -->
+        <test-method signature="testIsBookAvailable(java.lang.String,boolean)[pri:5, instance:test.LibraryTest@23c30a20]" started-at="2024-12-11T00:33:49 PKT" name="testIsBookAvailable" data-provider="bookAvailabilityData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[B001]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsBookAvailable -->
+        <test-method signature="testIsBookAvailable(java.lang.String,boolean)[pri:5, instance:test.LibraryTest@23c30a20]" started-at="2024-12-11T00:33:49 PKT" name="testIsBookAvailable" data-provider="bookAvailabilityData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[B002]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsBookAvailable -->
+        <test-method signature="testIsBookAvailable(java.lang.String,boolean)[pri:5, instance:test.LibraryTest@23c30a20]" started-at="2024-12-11T00:33:49 PKT" name="testIsBookAvailable" data-provider="bookAvailabilityData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[B003]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsBookAvailable -->
+        <test-method signature="testIsBookAvailable(java.lang.String,boolean)[pri:5, instance:test.LibraryTest@23c30a20]" started-at="2024-12-11T00:33:49 PKT" name="testIsBookAvailable" data-provider="bookAvailabilityData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[B004]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsBookAvailable -->
+      </class> <!-- test.LibraryTest -->
+      <class name="test.BookTest">
+        <test-method signature="testGetBookId(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:1, instance:test.BookTest@4803b726]" started-at="2024-12-11T00:33:49 PKT" name="testGetBookId" data-provider="bookIdData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="19" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[B001]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[B001]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[City of Hearts]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Ahmed Faraz]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBookId -->
+        <test-method signature="testGetBookId(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:1, instance:test.BookTest@4803b726]" started-at="2024-12-11T00:33:49 PKT" name="testGetBookId" data-provider="bookIdData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[B002]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[B002]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Dreams of the World]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Mahmood Khan]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBookId -->
+        <test-method signature="testGetBookId(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:1, instance:test.BookTest@4803b726]" started-at="2024-12-11T00:33:49 PKT" name="testGetBookId" data-provider="bookIdData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[B003]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[B003]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[World of Sufism]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Abdullah Khan]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetBookId -->
+        <test-method signature="testGetTitle(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:2, instance:test.BookTest@4803b726]" started-at="2024-12-11T00:33:49 PKT" name="testGetTitle" data-provider="bookTitleData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[City of Hearts]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[B001]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[City of Hearts]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Ahmed Faraz]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetTitle -->
+        <test-method signature="testGetTitle(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:2, instance:test.BookTest@4803b726]" started-at="2024-12-11T00:33:49 PKT" name="testGetTitle" data-provider="bookTitleData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dreams of the World]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[B002]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Dreams of the World]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Mahmood Khan]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetTitle -->
+        <test-method signature="testGetTitle(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:2, instance:test.BookTest@4803b726]" started-at="2024-12-11T00:33:49 PKT" name="testGetTitle" data-provider="bookTitleData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[World of Sufism]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[B003]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[World of Sufism]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Abdullah Khan]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetTitle -->
+        <test-method signature="testGetAuthor(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:3, instance:test.BookTest@4803b726]" started-at="2024-12-11T00:33:49 PKT" name="testGetAuthor" data-provider="bookAuthorData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Ahmed Faraz]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[B001]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[City of Hearts]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Ahmed Faraz]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAuthor -->
+        <test-method signature="testGetAuthor(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:3, instance:test.BookTest@4803b726]" started-at="2024-12-11T00:33:49 PKT" name="testGetAuthor" data-provider="bookAuthorData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Mahmood Khan]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[B002]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Dreams of the World]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Mahmood Khan]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAuthor -->
+        <test-method signature="testGetAuthor(java.lang.String,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:3, instance:test.BookTest@4803b726]" started-at="2024-12-11T00:33:49 PKT" name="testGetAuthor" data-provider="bookAuthorData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Abdullah Khan]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[B003]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[World of Sufism]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Abdullah Khan]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testGetAuthor -->
+        <test-method signature="testIsAvailable(boolean,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:4, instance:test.BookTest@4803b726]" started-at="2024-12-11T00:33:49 PKT" name="testIsAvailable" data-provider="bookAvailabilityData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="4" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[B001]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[City of Hearts]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Ahmed Faraz]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsAvailable -->
+        <test-method signature="testIsAvailable(boolean,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:4, instance:test.BookTest@4803b726]" started-at="2024-12-11T00:33:49 PKT" name="testIsAvailable" data-provider="bookAvailabilityData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[B002]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Dreams of the World]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Mahmood Khan]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsAvailable -->
+        <test-method signature="testIsAvailable(boolean,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:4, instance:test.BookTest@4803b726]" started-at="2024-12-11T00:33:49 PKT" name="testIsAvailable" data-provider="bookAvailabilityData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[B003]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[World of Sufism]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Abdullah Khan]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testIsAvailable -->
+        <test-method signature="testSetAvailable(boolean,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:5, instance:test.BookTest@4803b726]" started-at="2024-12-11T00:33:49 PKT" name="testSetAvailable" data-provider="setAvailableData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[B001]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[City of Hearts]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Ahmed Faraz]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetAvailable -->
+        <test-method signature="testSetAvailable(boolean,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:5, instance:test.BookTest@4803b726]" started-at="2024-12-11T00:33:49 PKT" name="testSetAvailable" data-provider="setAvailableData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[B002]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Dreams of the World]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Mahmood Khan]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetAvailable -->
+        <test-method signature="testSetAvailable(boolean,java.lang.String,java.lang.String,java.lang.String,boolean)[pri:5, instance:test.BookTest@4803b726]" started-at="2024-12-11T00:33:49 PKT" name="testSetAvailable" data-provider="setAvailableData" finished-at="2024-12-11T00:33:49 PKT" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[false]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[B003]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[World of Sufism]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Abdullah Khan]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetAvailable -->
+      </class> <!-- test.BookTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
