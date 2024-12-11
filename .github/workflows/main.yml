@@ -48,6 +48,7 @@ jobs:
 
     # Step 6: Build and Push Docker Image using Dockerfile from main branch
     - name: Build and Push Docker Image
+      id: build
       uses: docker/build-push-action@v4
       with:
         context: .  # Use the root directory of the repository as the build context
@@ -57,8 +58,12 @@ jobs:
         cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/my-java-app:latest  # Cache for faster builds
         cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/my-java-app:latest,mode=max  # Enable caching
 
-    # Optional: Tag the Docker image with commit SHA for unique image versions
+    # Step 7: Conditionally Tag the Docker image with Commit SHA
     - name: Tag Docker Image with Commit SHA
       run: |
-        docker tag ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest ${{ secrets.DOCKER_USERNAME }}/my-java-app:${{ github.sha }}
-        docker push ${{ secrets.DOCKER_USERNAME }}/my-java-app:${{ github.sha }}  # Push the commit-specific tag
+        if docker image inspect ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest > /dev/null 2>&1; then
+          docker tag ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest ${{ secrets.DOCKER_USERNAME }}/my-java-app:${{ github.sha }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/my-java-app:${{ github.sha }}  # Push the commit-specific tag
+        else
+          echo "Docker image not found. Skipping commit SHA tagging."
+        fi
