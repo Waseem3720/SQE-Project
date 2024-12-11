@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="0.489" tests="6" skipped="0" failures="0" errors="0">
-<testcase classname="Facebook Login" name="User logs in" time="0.063">
+<testsuite name="Cucumber" time="0.638" tests="6" skipped="0" failures="0" errors="0">
+<testcase classname="Facebook Login" name="User logs in" time="0.074">
 <system-out><![CDATA[
 Given I open the Chrome browser and navigate to "https://www.facebook.com/".passed
 When I enter "03042021926" into the "email" field...........................passed
@@ -9,7 +9,7 @@ When I click the "login" button.............................................pass
 Then I should be logged in successfully.....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Facebook Login" name="User posts a status" time="0.012">
+<testcase classname="Facebook Login" name="User posts a status" time="0.013">
 <system-out><![CDATA[
 Given I am logged into Facebook.............................................passed
 When I click on "What's on your mind?"......................................passed
@@ -18,7 +18,7 @@ And I click on "Post".......................................................pass
 Then my status should be posted successfully................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Facebook Login" name="User registers" time="0.015">
+<testcase classname="Facebook Login" name="User registers" time="0.021">
 <system-out><![CDATA[
 Given I am on the Facebook login page.......................................passed
 When I fill in "John" as my first name......................................passed
@@ -32,7 +32,7 @@ And I select "Male".........................................................pass
 Then I should be registered successfully....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Facebook Login" name="User recovers password" time="0.004">
+<testcase classname="Facebook Login" name="User recovers password" time="0.005">
 <system-out><![CDATA[
 Given I am on the Facebook login page.......................................passed
 When I enter "john.doe@example.com" into the email field....................passed
@@ -40,7 +40,7 @@ And I click the submit button...............................................pass
 Then I should see a confirmation message for password recovery..............passed
 ]]></system-out>
 </testcase>
-<testcase classname="Facebook Login" name="User logs out" time="0.007">
+<testcase classname="Facebook Login" name="User logs out" time="0.004">
 <system-out><![CDATA[
 Given I am logged into Facebook.............................................passed
 When I click the "Logout" button............................................passed
