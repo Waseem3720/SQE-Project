@@ -40,6 +40,7 @@ jobs:
 
     # Step 5: Build and Push Docker Image
     - name: Build and Push Docker Image
+      id: build
       uses: docker/build-push-action@v4
       with:
         context: .  # Root directory of the repository
@@ -49,4 +50,9 @@ jobs:
         cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
         cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/my-java-app:latest,mode=max
 
-    # Optional: Tagging step removed as it's not required
+    # Step 6: Tag the Docker image with the commit SHA
+    - name: Tag Docker image with commit SHA
+      run: |
+        echo "Tagging Docker image with commit SHA..."
+        docker tag ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest ${{ secrets.DOCKER_USERNAME }}/my-java-app:${{ github.sha }}
+        docker push ${{ secrets.DOCKER_USERNAME }}/my-java-app:${{ github.sha }}
