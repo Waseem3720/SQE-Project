@@ -46,7 +46,7 @@ jobs:
       uses: docker/build-push-action@v4
       with:
         context: .  # Root directory of the repository
-        file: ./Dockerfile  # Ensure correct path to Dockerfile
+        file: ./Dockerfile  # Ensure the correct path to Dockerfile (it should be in the root directory)
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
         cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
