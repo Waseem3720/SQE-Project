@@ -22,11 +22,13 @@ jobs:
       with:
         ref: ${{ github.ref }}  # Automatically uses the correct branch (main or master)
 
-    # Debug: List files to confirm the Dockerfile exists in the correct branch
-    - name: List files in repository
+    # Debug: Check if Dockerfile exists and list all files in the root directory
+    - name: Check Dockerfile existence
       run: |
-        echo "Listing files in the repository"
-        ls -R  # Recursively list all files to ensure Dockerfile exists at root
+        echo "Checking if Dockerfile exists..."
+        if [ -f Dockerfile ]; then echo "Dockerfile found"; else echo "Dockerfile not found"; fi
+        echo "Listing files in the root directory"
+        ls -l
 
     # Step 2: Set up Docker Buildx (for building multi-platform Docker images)
     - name: Set up Docker Buildx
