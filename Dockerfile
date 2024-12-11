@@ -24,7 +24,7 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
 # Expose any ports your application requires (e.g., for a web UI)
-EXPOSE 8081
+EXPOSE 4000
 
 # Run the application
 CMD ["java", "-jar", "app.jar"]
