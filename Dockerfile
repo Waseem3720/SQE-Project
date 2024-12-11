@@ -1,56 +1,34 @@
-name: Build and Deploy Docker Image
+# Use an official Maven image as the base image
+FROM maven:3.9.3-eclipse-temurin-17 AS build
 
-on:
-  push:
-    branches:
-      - main  # Trigger workflow on pushes to main branch
-      - master
+# Set the working directory in the container
+WORKDIR /app
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# Copy the pom.xml and download project dependencies
+COPY pom.xml .
+RUN mvn dependency:go-offline -B
 
-    steps:
-    # Step 1: Checkout the repository
-    - name: Checkout code
-      uses: actions/checkout@v3
+# Copy the entire project to the container
+COPY . .
 
-    # Step 2: Debug - Validate Dockerfile existence
-    - name: Validate Dockerfile existence
-      run: |
-        echo "Checking if Dockerfile exists in main branch..."
-        ls -la
-        if [ -f Dockerfile ]; then 
-          echo "Dockerfile found in the main branch!";
-        else 
-          echo "Dockerfile not found in the main branch! Exiting...";
-          exit 1;
-        fi
+# Build the project
+RUN mvn clean install -DskipTests
 
-    # Step 3: Set up Docker Buildx
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v2
+# Use a lightweight JDK image for runtime
+FROM eclipse-temurin:17-jdk-jammy
 
-    # Step 4: Log in to DockerHub
-    - name: Log in to DockerHub
-      uses: docker/login-action@v2
-      with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+# Set the working directory in the container
+WORKDIR /app
 
-    # Step 5: Build and Push Docker Image
-    - name: Build and Push Docker Image
-      uses: docker/build-push-action@v4
-      with:
-        context: .  # Root directory of the repository
-        file: ./Dockerfile  # Path to Dockerfile in main branch root
-        push: true
-        tags: ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
-        cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
-        cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/my-java-app:latest,mode=max
+# Copy the built JAR from the build stage
+COPY --from=build /app/target/*.jar app.jar
 
-    # Step 6: Optional - Tag the image with commit SHA
-    - name: Tag Docker Image with Commit SHA
-      run: |
-        docker tag ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest ${{ secrets.DOCKER_USERNAME }}/my-java-app:${{ github.sha }}
-        docker push ${{ secrets.DOCKER_USERNAME }}/my-java-app:${{ github.sha }}
+# Expose any ports your application requires (e.g., for a web UI)
+EXPOSE 4000
+
+# Run the application
+CMD ["java", "-jar", "app.jar"]
+
+
+
+
