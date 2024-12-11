@@ -1,12 +1,14 @@
 name: Build and Deploy Docker Image
 
-# Trigger the workflow on push to the main branch or pull request to main
+# Trigger the workflow on push to the main or master branch, or on pull requests targeting main or master
 on:
   push:
     branches:
+      - main
       - master
   pull_request:
     branches:
+      - main
       - master
 
 jobs:
@@ -45,4 +47,5 @@ jobs:
       run: |
         docker tag ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest ${{ secrets.DOCKER_USERNAME }}/my-java-app:${{ github.sha }}
         docker push ${{ secrets.DOCKER_USERNAME }}/my-java-app:${{ github.sha }}
+
 
