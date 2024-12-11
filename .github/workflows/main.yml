@@ -15,17 +15,13 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # Step 2: Debug - Check Dockerfile existence
-    - name: Check Dockerfile existence
+    # Step 2: Debug - Check Dockerfile existence and list files
+    - name: Debug: List all files and Dockerfile existence
       run: |
-        echo "Checking if Dockerfile exists..."
+        echo "Debugging file locations..."
         ls -la
-        if [ -f Dockerfile ]; then 
-          echo "Dockerfile found!";
-        else 
-          echo "Dockerfile not found!";
-          exit 1; # Fail the workflow if Dockerfile is missing
-        fi
+        echo "Searching for Dockerfile..."
+        find . -name "Dockerfile"
 
     # Step 3: Set up Docker Buildx
     - name: Set up Docker Buildx
@@ -43,14 +39,6 @@ jobs:
       uses: docker/build-push-action@v4
       with:
         context: .  # Root directory of the repository
-        file: ./Dockerfile  # Path to the Dockerfile (assumes Dockerfile is in the root)
+        file: ./Dockerfile  # Ensure this matches the exact Dockerfile path
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
-        cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
-        cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/my-java-app:latest,mode=max
-
-    # Optional: Tag the image with commit SHA
-    - name: Tag Docker image with commit SHA
-      run: |
-        docker tag ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest ${{ secrets.DOCKER_USERNAME }}/my-java-app:${{ github.sha }}
-        docker push ${{ secrets.DOCKER_USERNAME }}/my-java-app:${{ github.sha }}
