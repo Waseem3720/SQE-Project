@@ -1,9 +1,9 @@
-name: Debug and Build Docker Image
+name: Build and Deploy Docker Image
 
 on:
   push:
     branches:
-      - main
+      - main  # Trigger workflow on pushes to main branch
       - master
 
 jobs:
@@ -15,39 +15,42 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # Step 2: Debug - List files and check Dockerfile existence
-    - name: Debug - List all files in the repository
-      run: |
-        echo "Listing all files in the repository root..."
-        ls -la
-        echo "Searching for Dockerfile recursively..."
-        find . -name "Dockerfile"
-
-    # Step 3: Exit if Dockerfile not found
+    # Step 2: Debug - Validate Dockerfile existence
     - name: Validate Dockerfile existence
       run: |
-        echo "Validating Dockerfile existence..."
-        if [ ! -f Dockerfile ]; then
-          echo "Error: Dockerfile not found in the repository root!";
+        echo "Checking if Dockerfile exists in main branch..."
+        ls -la
+        if [ -f Dockerfile ]; then 
+          echo "Dockerfile found in the main branch!";
+        else 
+          echo "Dockerfile not found in the main branch! Exiting...";
           exit 1;
         fi
 
-    # Step 4: Set up Docker Buildx
+    # Step 3: Set up Docker Buildx
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
 
-    # Step 5: Log in to DockerHub
+    # Step 4: Log in to DockerHub
     - name: Log in to DockerHub
       uses: docker/login-action@v2
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    # Step 6: Build and Push Docker Image
+    # Step 5: Build and Push Docker Image
     - name: Build and Push Docker Image
       uses: docker/build-push-action@v4
       with:
-        context: .  # Adjust if Dockerfile is not in the root directory
-        file: ./Dockerfile
+        context: .  # Root directory of the repository
+        file: ./Dockerfile  # Path to Dockerfile in main branch root
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
+        cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
+        cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/my-java-app:latest,mode=max
+
+    # Step 6: Optional - Tag the image with commit SHA
+    - name: Tag Docker Image with Commit SHA
+      run: |
+        docker tag ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest ${{ secrets.DOCKER_USERNAME }}/my-java-app:${{ github.sha }}
+        docker push ${{ secrets.DOCKER_USERNAME }}/my-java-app:${{ github.sha }}
