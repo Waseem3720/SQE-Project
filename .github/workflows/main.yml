@@ -15,12 +15,17 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # Step 2: Debug - Check if the Dockerfile exists in the repository
+    # Step 2: Debug - Check Dockerfile existence
     - name: Check Dockerfile existence
       run: |
         echo "Checking if Dockerfile exists..."
-        ls -la # List files to confirm Dockerfile location
-        if [ -f Dockerfile ]; then echo "Dockerfile found!"; else echo "Dockerfile not found!"; fi
+        ls -la
+        if [ -f Dockerfile ]; then 
+          echo "Dockerfile found!";
+        else 
+          echo "Dockerfile not found!";
+          exit 1; # Fail the workflow if Dockerfile is missing
+        fi
 
     # Step 3: Set up Docker Buildx
     - name: Set up Docker Buildx
