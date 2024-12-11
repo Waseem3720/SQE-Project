@@ -16,9 +16,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Check out the code from the GitHub repository
+    # Step 1: Checkout the code from the GitHub repository (ensure master or main is used)
     - name: Checkout code
       uses: actions/checkout@v3
+      with:
+        ref: ${{ github.ref }}  # Automatically uses the correct branch (main or master)
 
     # Step 2: Set up Docker Buildx (for building multi-platform Docker images)
     - name: Set up Docker Buildx
@@ -35,8 +37,8 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v4
       with:
-        context: .
-        file: ./Dockerfile
+        context: .  # Root directory of the repository
+        file: ./Dockerfile  # Ensure correct path to Dockerfile
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
         cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
@@ -47,5 +49,3 @@ jobs:
       run: |
         docker tag ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest ${{ secrets.DOCKER_USERNAME }}/my-java-app:${{ github.sha }}
         docker push ${{ secrets.DOCKER_USERNAME }}/my-java-app:${{ github.sha }}
-
-
