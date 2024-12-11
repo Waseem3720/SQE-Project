@@ -2,7 +2,8 @@ name: Publish Docker image
 
 on:
   push:
-    branches: ['master']
+    branches:
+      - master   # Trigger on push to the master branch
 
 jobs:
   push_to_registry:
@@ -21,18 +22,11 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    # Step 3: Extract metadata (tags, labels) for Docker
-    - name: Extract metadata (tags, labels) for Docker
-      uses: docker/metadata-action@v4
-      with:
-        images: thetips4you/testjodejsapp
-
-    # Step 4: Build and push Docker image
+    # Step 3: Build and push Docker image
     - name: Build and push Docker image
       uses: docker/build-push-action@v4
       with:
-        context: .
-        push: true
-        tags: ${{ steps.meta.outputs.tags }}
-        labels: ${{ steps.meta.outputs.labels }}
-        file: Dockerfile  # Ensure Dockerfile is in the root directory
+        context: .  # The context is the root of your repository
+        push: true   # Push the image to Docker Hub
+        tags: ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest  # Tag the image
+        file: ./Dockerfile  # Explicitly specify the Dockerfile path if it's not in the root
