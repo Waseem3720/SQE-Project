@@ -22,12 +22,17 @@ jobs:
         ref: ${{ github.ref }}  # Automatically uses the correct branch (main or master)
 
     # Debug: Check the Dockerfile existence and list the root directory files
-    - name: Check Dockerfile existence
+    - name: Force Dockerfile Existence Check
       run: |
-        echo "Listing the root directory contents:"
+        echo "Listing the root directory contents..."
         ls -la
-        echo "Checking Dockerfile existence..."
-        if [ -f Dockerfile ]; then echo "Dockerfile found!"; else echo "Dockerfile not found!"; fi
+        echo "Looking for Dockerfile at ./Dockerfile"
+        if [ -f ./Dockerfile ]; then
+          echo "Dockerfile found at ./Dockerfile!"
+        else
+          echo "Dockerfile not found at ./Dockerfile. Searching for it in subdirectories..."
+          ls -R | grep Dockerfile
+        fi
 
     # Step 2: Set up Docker Buildx (for building multi-platform Docker images)
     - name: Set up Docker Buildx
@@ -45,7 +50,7 @@ jobs:
       uses: docker/build-push-action@v4
       with:
         context: .  # Root directory of the repository
-        file: ./Dockerfile  # Path to the Dockerfile (should be in the root directory)
+        file: ./Dockerfile  # Hardcoded path to the Dockerfile
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
         cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
