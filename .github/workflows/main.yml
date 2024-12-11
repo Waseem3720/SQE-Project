@@ -15,7 +15,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # Step 2: Debug - Check Dockerfile existence
+    # Step 2: Check if Dockerfile exists in the root
     - name: Check Dockerfile existence
       run: |
         echo "Checking if Dockerfile exists..."
@@ -46,29 +46,15 @@ jobs:
         context: .  # Root directory of the repository
         file: ./Dockerfile  # Path to the Dockerfile
         push: true
-        no-cache: true  # Clear the cache to avoid caching issues
         tags: ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
-        cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
-        cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/my-java-app:latest,mode=max
 
-    # Step 6: Check if the image exists before tagging
-    - name: List Docker images
-      run: |
-        echo "Listing available Docker images..."
-        docker images
-
-    # Step 7: Tag Docker image with commit SHA only if it exists
-    - name: Tag Docker image with commit SHA
+    # Step 6: Tag Docker Image with Commit SHA
+    - name: Tag Docker Image with Commit SHA
       run: |
         echo "Tagging Docker image with commit SHA..."
         IMAGE_NAME=${{ secrets.DOCKER_USERNAME }}/my-java-app
-        TAG_NAME=${{ github.sha }}
-        
-        # Ensure the image exists before tagging
-        if docker images | grep -q "$IMAGE_NAME"; then
-          docker tag $IMAGE_NAME:latest $IMAGE_NAME:$TAG_NAME
-          docker push $IMAGE_NAME:$TAG_NAME
-        else
-          echo "Image $IMAGE_NAME:latest not found. Skipping tag step."
-          exit 1  # Exit with error if the image doesn't exist
-        fi
+        COMMIT_SHA=${{ github.sha }}
+
+        # Tag the image with the commit SHA
+        docker tag $IMAGE_NAME:latest $IMAGE_NAME:$COMMIT_SHA
+        docker push $IMAGE_NAME:$COMMIT_SHA
