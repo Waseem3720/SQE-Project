@@ -15,19 +15,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the code from the GitHub repository (ensure master or main is used)
+    # Step 1: Checkout the code from the GitHub repository
     - name: Checkout code
       uses: actions/checkout@v3
       with:
         ref: ${{ github.ref }}  # Automatically uses the correct branch (main or master)
 
-    # Debug: Verify the presence of Dockerfile and list the contents of the root directory
+    # Debug: Check the Dockerfile existence and list the root directory files
     - name: Check Dockerfile existence
       run: |
-        echo "Checking if Dockerfile exists..."
-        if [ -f Dockerfile ]; then echo "Dockerfile found"; else echo "Dockerfile not found"; fi
-        echo "Listing files in the root directory"
-        ls -l
+        echo "Checking Dockerfile existence..."
+        ls -la
+        if [ -f Dockerfile ]; then echo "Dockerfile found!"; else echo "Dockerfile not found!"; fi
 
     # Step 2: Set up Docker Buildx (for building multi-platform Docker images)
     - name: Set up Docker Buildx
@@ -45,7 +44,7 @@ jobs:
       uses: docker/build-push-action@v4
       with:
         context: .  # Root directory of the repository
-        file: ./Dockerfile  # Ensure the correct path to Dockerfile (it should be in the root directory)
+        file: ./Dockerfile  # Path to the Dockerfile (should be in the root directory)
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
         cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
