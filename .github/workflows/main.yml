@@ -44,13 +44,14 @@ jobs:
       uses: docker/build-push-action@v4
       with:
         context: .  # Root directory of the repository
-        file: ./Dockerfile  # Path to the Dockerfile (assumes Dockerfile is in the root)
+        file: ./Dockerfile  # Path to the Dockerfile
         push: true
+        no-cache: true  # Clear the cache to avoid caching issues
         tags: ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
         cache-from: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
         cache-to: type=registry,ref=${{ secrets.DOCKER_USERNAME }}/my-java-app:latest,mode=max
 
-    # Step 6: Tag the Docker image with the commit SHA
+    # Step 6: Tag Docker image with commit SHA
     - name: Tag Docker image with commit SHA
       run: |
         echo "Tagging Docker image with commit SHA..."
