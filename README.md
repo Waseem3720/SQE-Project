@@ -1,4 +1,5 @@
 # SQE-Project
 
 This is my SQE is Project
-Related to UI, API, Uunit Testing  .  
+Related to UI, API, Uunit Testing  
+
